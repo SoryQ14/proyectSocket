@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi aplicacion con Sockets</title>
+        <!--Mandamos llamar la libreria para que el frontend use sockets.io-->
+        <!--Es una libreria que se utiliza tanto en el server cono en el cliente -->
+        <script src="/socket.io/socket.io.js"></script>
+        <!--Mandamos llamar nuestra propia libreria main.js-->
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <h1>Pagina soraja</h1>
+        <!--queremos que estos mensajes se vean en nuestra pag como chat-->
+        <div id="messages"></div>
+        <br>
+        <!--Creamos un formulario para mandar mensjaes-->
+        <!--No pondremos una accion para que no se recarge la pagina y todo se realtime-->
+        <!--Por lo tanto utilizaremos onsubmint que hara -->
+        <form>
+            <input type="text" id="username" placeholder="Tu nombre">
+            <input type="text" id="texto" placeholder="Cuentanos algo">
+            <input type="submit" value="Enviar">
+        </form>
+
+    </body>
+</html>
