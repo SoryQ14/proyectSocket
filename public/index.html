@@ -19,7 +19,7 @@
         <!--Creamos un formulario para mandar mensjaes-->
         <!--No pondremos una accion para que no se recarge la pagina y todo se realtime-->
         <!--Por lo tanto utilizaremos onsubmint que hara -->
-        <form>
+        <form onsubmit="return addMessage(this)">
             <input type="text" id="username" placeholder="Tu nombre">
             <input type="text" id="texto" placeholder="Cuentanos algo">
             <input type="submit" value="Enviar">
