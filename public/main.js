@@ -26,9 +26,9 @@ function render(data){
 //cada ves que alguien precione el boton enviar en el formulario
 //El cliente emite un nuevo mensaje y manda el payload
 function addMessage(e){
-    var payload ={
-        Autor: document.getElementById(username).value, 
-        texto: document.getElementById(texto).value
+    var payload = {
+        Autor: document.getElementById("username").value, 
+        texto: document.getElementById("texto").value
     }; 
     socket.emit('new-message',payload); 
     return false; 
