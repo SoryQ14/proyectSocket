@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var server = require ('http').Server(app); 
 var io = require('socket.io')(server); 
+const cors = require('cors');  
 
 var messages = [{
     id: 1,
@@ -10,7 +11,8 @@ var messages = [{
 }]; 
 
 /**Usamos un diffleware para usar elementos estaticos en las seccion publica  */
-app.use(express.static('public')); 
+app.use(express.static('public'));
+app.use(cors()); 
 
 app.get('/',function(req, res){
     res.status(200).send("Hola Mundo :)"); 
